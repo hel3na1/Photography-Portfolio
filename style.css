@@ -389,4 +389,5 @@ section .container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 1rem;
     margin-top: 1rem; /* Espaço superior para separar da seção de filtros */
-    transition: opacity 
+    transition: opacity
+}
