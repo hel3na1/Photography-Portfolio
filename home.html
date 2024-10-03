@@ -11,21 +11,55 @@
     <link rel="stylesheet" href="style.css">
     <script src="animation.js" defer></script> <!-- Chamando o arquivo JavaScript -->
     <script src="script.js" defer></script> <!-- Chamando o arquivo JavaScript para filtragem -->
+    <style>
+        /* Estilos para a galeria e filtragem */
+        .filter-buttons {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .filter-buttons li {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .filter-buttons li.active {
+            background-color: #0056b3;
+        }
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .image {
+            display: none;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image.active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="logo-wrapper">
-                <a class="logo" href="index.html"> <strong>JV</strong> Jack Venilli </a>
+                <a class="logo" href="index.html"> <strong>DV</strong> Diego Viana </a>
             </div>
-
             <ul class="navbar-links">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Inicial</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#works">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Contato">Contato</a></li>
             </ul>
         </div>
     </nav>
@@ -33,141 +67,67 @@
     <div class="header">
         <div class="container">
             <div class="box">
-                <h4 class="">Hello there !</h4>
-                <h1 class="">I'm Jack Venilli</h1>
+                <h4 class="">Fotógrafo Profissional</h4>
+                <h1 class="">Diego Viana</h1>
                 <p class="">
-                    I am a professional photographer based in San Francisco, creating dreamscapes with
-                    black, white, and shades in-between.
+                    Em cada evento, capturando momentos com encanto e talento.
                 </p>
                 <a href="#" class="btn">My works</a>
                 <a href="#" class="btn">Contact me</a>
             </div>
-
         </div>
     </div>
 
     <!-- About section -->
-    <section class="about bg-light" id="about">
+    <section class="sobre bg-light" id="sobre">
         <div class="container">
             <div class="box">
                 <h2 class="title">
-                    Jack Venilli, a professional photographer based in San Francisco
+                    Fotógrafo de Brasília e entorno, e para todo o Brasil!
                 </h2>
                 <p>
-                    I love to pause the wild, happy, and real moments of life, just to hear their stories untold.
-                    Viverra tristique usto duis vitae diam neque nivamus estan ateuene artines viverra nec setlie no
-                    curabit tristique.
+                    Meu nome é Diego Jesus do Carmo Viana, e desde os 10 anos, a fotografia tem sido minha paixão e profissão.
                 </p>
                 <ul>
                     <li>
                         <i class="fa fa-check" aria-hidden="true"></i>
-                        <span>Over 15 years of experience</span>
+                        <span>Olhar Artístico: Capturo emoções e detalhes únicos em cada foto.</span>
                     </li>
                     <li>
                         <i class="fa fa-check" aria-hidden="true"></i>
-                        <span>200+ successfully executed projects</span>
+                        <span>Versatilidade: Experiência em diversos tipos de ensaios e eventos.</span>
                     </li>
                     <li>
                         <i class="fa fa-check" aria-hidden="true"></i>
-                        <span>Exceptional work quality</span>
+                        <span>Foco no Cliente: Personalizo cada sessão para criar memórias inesquecíveis.</span>
                     </li>
                 </ul>
-
                 <div class="about-bottom">
-                    <img src="./images/signature.svg" alt="" class="signature">
+                    <img src="./images/di2.jpg" alt="" class="signature">
                     <div class="about-name-wrapper">
-                        <div class="about-name-dark">Jack Venilli</div>
-                        <div class="about-role">Founder of Photography</div>
+                        <div class="about-name-dark">A melhor escolha </div>
+                        <div class="about-role">Pro seu evento</div>
                     </div>
                 </div>
             </div>
-
             <div class="about-img">
                 <div class="img">
-                    <img src="./images/pexels-alexis-caso-2944191.jpg" alt="">
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- About section -->
-
-    <!-- Services section -->
-    <section class="services bg-dark" id="services">
-        <div class="heading">
-            <h2 class="section-title"><span>My Services</span></h2>
-            <p class="section-title2">Quverra tristique justo duis vitae diam neque nivamus aestan ateuene artinaelition
-                finibus viverra nec lacus setlie suscipe tristique.</p>
-        </div>
-        <div class="container">
-            <div class="box border-01">
-                <div class="item">
-                    <img src="./images/icons/icon-1.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Photography</h6>
-                        <p>Photography bibendum eros amet vacun the vulputate in the vitae miss.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box border-02">
-                <div class="item">
-                    <img src="./images/icons/icon-2.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Videography</h6>
-                        <p>Videography bibendum eros amen vacun the vulputate in the vitae miss.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box border-03">
-                <div class="item">
-                    <img src="./images/icons/icon-3.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Photo Retouching</h6>
-                        <p>Photo Retouching bibenum eros amen vacun the vulputate the vitae miss.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box border-04">
-                <div class="item">
-                    <img src="./images/icons/icon-4.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Aerial Photography</h6>
-                        <p>Aerial Photography bibendum eros amen vacun the vulputate in the miss.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box border-05">
-                <div class="item">
-                    <img src="./images/icons/icon-5.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Lighting Setup</h6>
-                        <p>Lighting Setup bibendum eros amen vacus duru in the vitae miss.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="box border-06">
-                <div class="item">
-                    <img src="./images/icons/icon-6.svg" alt="">
-                    <a href="services-page.html">
-                        <h6>Video Color Grading</h6>
-                        <p>Video Color Grading bibendum amen vacus the vulputate in the vitae.</p>
-                    </a>
+                    <img src="./images/di.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services section -->
 
     <!-- Works Gallery -->
     <section class="gallery bg-dark" id="works">
-        <div class="heading">
-            <h2 class="title">My Works</h2>
+        <div class="casamento">
+            <h2 class="title">Meus trabalhos</h2>
         </div>
         <div class="container">
             <ul class="filter-buttons">
                 <li class="filter-button active" data-filter="all">All</li>
-                <li class="filter-button" data-filter="personal">Personal</li>
-                <li class="filter-button" data-filter="wedding">Wedding</li>
+                <li class="filter-button" data-filter="corporativo">corporativo</li>
+                <li class="filter-button" data-filter="casamento">casamento</li>
                 <li class="filter-button" data-filter="event">Event</li>
                 <li class="filter-button" data-filter="fashion">Fashion</li>
                 <li class="filter-button" data-filter="product">Product</li>
@@ -175,27 +135,102 @@
         </div>
         <div class="container">
             <div class="grid-wrapper">
-                <div class="image tall personal">
-                    <img src="./images/album/pexels-photo-1055613.jpg" alt="" />
+                <div class="image corporativo">
+                    <img src="./images/corporativo1.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo2.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo3.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo4.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo5.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo6.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo7.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo8.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo9.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo10.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo11.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo12.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo13.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo14.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo15.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo16.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo17.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo18.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo19.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo20.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo21.JPG" alt="corporativo Image" />
+                    <img src="./images/corporativo22.JPG" alt="corporativo Image" />
                 </div>
-                <div class="image wide wedding">
-                    <img src="./images/album/pexels-photo-1738986.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1738986.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1738986.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1738986.jpg" alt="" />
+                <div class="image casamento">
+                    <img src="./images/casamento1.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento2.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento3.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento4.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento5.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento6.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento9.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento10.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento12.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento13.JPG  " alt="casamento Image" /> 
+                    <img src="./images/casamento14.JPG  " alt="casamento Image" />                    <img src="./images/casamento11.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento16.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento17.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento18.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento19.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento20.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento21.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento22.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento23.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento25.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento26.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento27.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento28.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento29.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento30.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento31.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento32.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento33.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento34.JPG  " alt="casamento Image" />
+                    <img src="./images/casamento35.JPG  " alt="casamento Image" />
+
                 </div>
-                <div class="image tall event">
-                    <img src="./images/album/pexels-photo-2970287.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-2970287.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-2970287.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-2970287.jpg" alt="" />
+                <div class="image event">
+                    <img src="./images/album/pexels-photo-2970287.jpg" alt="Event Image" />
                 </div>
                 <div class="image fashion">
-                    <img src="./images/album/pexels-photo-1722206.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1722206.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1722206.jpg" alt="" />
-                    <img src="./images/album/pexels-photo-1722206.jpg" alt="" />
+                    <img src="./images/album/pexels-photo-1722206.jpg" alt="Fashion Image" />
                 </div>
                 <div class="image product">
-                    <img src="./images/album/pexels-photo-3494648.jpg" alt="" />
-                    <
+                    <img src="./images/album/pexels-photo-3494648.jpg" alt="Product Image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const images = document.querySelectorAll('.image');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove 'active' class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add 'active' class to the clicked button
+                button.classList.add('active');
+
+                // Get the filter category
+                const filter = button.getAttribute('data-filter');
+
+                // Show or hide images based on the filter
+                images.forEach(image => {
+                    if (filter === 'all' || image.classList.contains(filter)) {
+                        image.classList.add('active');
+                    } else {
+                        image.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
